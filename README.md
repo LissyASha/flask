@@ -10,82 +10,61 @@ The project is organized as follows:
 - `tests/`: Houses unit tests for the application.
 - `run.py`: A script to run the Flask application.
 
-## Getting Started
+# 🚀 CI/CD Pipelines for Flask Application
 
-To get the Flask app up and running on your local machine, follow these steps:
+This repository demonstrates how to set up **CI/CD pipelines** for a simple Python Flask application using:
 
-1. **Clone the Repository:**
+1. **Jenkins Pipeline**
+2. **GitHub Actions Workflow**
 
-   ```bash
-   git clone <repository_url>
-   cd flask_sample_app
-   ```
+---
 
-2. **Set Up a Virtual Environment:**
+## 📌 Part 1: Jenkins CI/CD Pipeline
 
-   It's recommended to create a virtual environment to isolate project dependencies.
+### 🎯 Objective
+Set up a Jenkins pipeline that automates the **build → test → deploy(Staging)** process for a Flask web application.
 
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows, use venv\Scripts\activate
-   ```
+---
+## Table of Contents
 
-3. **Install Dependencies:**
+- [Project Setup](#project-setup)
+- [Requirements](#requirements)
+- [Jenkins CI/CD Pipeline](#jenkins-cicd-pipeline)
+- [Testing the Application](#testing-the-application)
+- [Deployment](#deployment)
+- [Contact](#contact)
 
-   Install the necessary dependencies using `pip`:
+---
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+## Project Setup
 
-4. **Run the Application:**
+1. Clone the repository:
 
-   Start the Flask application:
+```bash
+git clone https://github.com/LissyASha/flask.git
+cd flask
 
-   ```bash
-   python run.py
-   ```
+2. Requirements
+   Python 3.10+
+   Flask
+   Gunicorn
+   pytest
+   Flask-Testing
+3. Jenkins CI/CD Pipeline
 
-   The app will be available at [http://localhost:5000](http://localhost:5000).
+   Jenkinsfile Overview
+      ->Build Stage: Installs Python dependencies.
+      ->Test Stage: Runs unit tests using pytest.
+      ->Deploy Stage: Deploys Flask app using Gunicorn.
+      ->Post Section: Sends email notifications on success/failure.
 
-5. **Run Tests:**
+   Steps to Configure Jenkins:
+      ->Create a new Pipeline Job in Jenkins.
+      ->Configure Pipeline from SCM pointing to this repository.
+      ->Enable GitHub hook trigger for GITScm polling.
+      ->Add Jenkinsfile in the repo root.
+      ->Update email settings in Jenkins:
+         Manage Jenkins → Configure System → E-mail Notification
+         Use your SMTP server and credentials.
 
-   To run the unit tests, execute the following command:
-
-   ```bash
-   python -m unittest discover tests
-   ```
-
-   This command will discover and run all tests in the `tests` directory.
-
-## Application Routes
-
-The application provides the following routes:
-
-- `GET /`: Returns a simple greeting message.
-- `GET /items`: Returns a list of items.
-- `GET /items/{item_id}`: Returns the details of a specific item.
-- `POST /items`: Adds a new item to the list.
-
-## Testing
-
-Unit tests are provided in the `tests` directory. They cover the basic functionality of the application, including route handling and response validation. You can use these tests as a reference to write your own tests or to verify the correctness of the application.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contribute
-
-Feel free to contribute to this project by opening issues or submitting pull requests. We welcome any improvements, bug fixes, or additional features.
-
-## Author
-
-- Pan Luo
-
-## Acknowledgments
-
-- This project was created as a sample Flask application for educational purposes.
-- Special thanks to the Flask community for providing a fantastic web framework.
-
-Enjoy experimenting with the Flask sample app! If you have any questions or need further assistance, please don't hesitate to reach out.
+<img width="1342" height="685" alt="image" src="https://github.com/user-attachments/assets/cf7cb9e9-bcb0-4b8b-84ed-9aad94fe0d55" />
