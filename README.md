@@ -66,5 +66,6 @@ cd flask
          Use your SMTP server and credentials.
 
 
-![Jenkins_Pipeline_Success](https://github.com/user-attachments/assets/2428c55f-cb4e-46e7-83d6-2a890da2bb79)
+<img width="1342" height="685" alt="image" src="https://github.com/user-attachments/assets/64381a95-6e5c-4c8e-9130-d7038cb12358" />
+
 
