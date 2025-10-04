@@ -32,8 +32,6 @@ Set up a Jenkins pipeline that automates the **build → test → deploy(Staging
 - [Jenkins CI/CD Pipeline](#jenkins-cicd-pipeline)
 - [Testing the Application](#testing-the-application)
 - [Deployment](#deployment)
-- [Contact](#contact)
-
 ---
 
 ## Project Setup
