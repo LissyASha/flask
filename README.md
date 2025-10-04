@@ -38,7 +38,7 @@ Set up a Jenkins pipeline that automates the **build → test → deploy(Staging
 
 1. Clone the repository:
 
-```bash
+bash
 git clone https://github.com/LissyASha/flask.git
 cd flask
 
@@ -64,5 +64,6 @@ cd flask
       ->Update email settings in Jenkins:
          Manage Jenkins → Configure System → E-mail Notification
          Use your SMTP server and credentials.
+
 
 <img width="1342" height="685" alt="image" src="https://github.com/user-attachments/assets/db564871-6a05-494d-9121-f68dcbf771c0" />
