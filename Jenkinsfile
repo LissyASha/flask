@@ -1,6 +1,6 @@
 pipeline {
     agent any
-
+  
     environment {
         APP_NAME = 'FlaskApp'
         CONTACT_EMAIL = 'lissy.asha@gmail.com'
@@ -9,23 +9,34 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Installing dependencies...'
-                sh 'pip install -r requirements.txt'
+                echo 'Setting up virtual environment & installing dependencies...'
+                sh '''
+                    python3 -m venv venv
+                    . venv/bin/activate
+                    pip install --upgrade pip
+                    pip install -r requirements.txt
+                '''
             }
         }
 
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                sh 'pytest tests/'
+                sh '''
+                    . venv/bin/activate
+                    pytest tests/
+                '''
             }
         }
 
         stage('Deploy (staging)') {
             steps {
                 echo 'Deploying Flask app using Gunicorn...'
-                sh 'pkill gunicorn || true'
-                sh 'gunicorn -w 4 -b 0.0.0.0:5000 app:app &'
+                sh '''
+                    pkill gunicorn || true
+                    . venv/bin/activate
+                    gunicorn -w 4 -b 0.0.0.0:5000 app:app &
+                '''
             }
         }
     }
