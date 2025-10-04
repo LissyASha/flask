@@ -67,3 +67,5 @@ cd flask
 
 
 <img width="1342" height="685" alt="image" src="https://github.com/user-attachments/assets/db564871-6a05-494d-9121-f68dcbf771c0" />
+
+<img width="996" height="475" alt="image" src="https://github.com/user-attachments/assets/1826483f-b4eb-4bd4-902b-431ec6e02ef1" />
