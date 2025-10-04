@@ -64,5 +64,4 @@ cd flask
       ->Update email settings in Jenkins:
          Manage Jenkins → Configure System → E-mail Notification
          Use your SMTP server and credentials.
-
-<img width="1342" height="685" alt="image" src="https://github.com/user-attachments/assets/64381a95-6e5c-4c8e-9130-d7038cb12358" />
+<img width="1342" height="685" alt="image" src="https://github.com/user-attachments/assets/64381a95-6e5c-4c8e-9130-d7038cb12358"/>
