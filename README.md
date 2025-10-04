@@ -65,4 +65,6 @@ cd flask
          Manage Jenkins → Configure System → E-mail Notification
          Use your SMTP server and credentials.
 
-<img width="1342" height="685" alt="image" src="https://github.com/user-attachments/assets/cf7cb9e9-bcb0-4b8b-84ed-9aad94fe0d55" />
+
+![Jenkins_Pipeline_Success](https://github.com/user-attachments/assets/2428c55f-cb4e-46e7-83d6-2a890da2bb79)
+
